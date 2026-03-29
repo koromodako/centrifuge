@@ -1,0 +1,96 @@
+{
+    "meta": {
+        "label": "Centrifuge Enrichment",
+        "description": "Dataset enrichment based on Centrifuge",
+        "icon": "fas fa-globe"
+    },
+    "kind": "PYTHON",
+    "resourceKeys": [],
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "label": "Input dataset",
+            "description": "Dataset containing input data",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output dataset",
+            "description": "Dataset containing enriched data",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "atom_column",
+            "type": "COLUMN",
+            "label": "Atom Column",
+            "description": "Column containing the atom to enrich",
+            "mandatory": true,
+            "columnRole": "input_dataset"
+        },
+        {
+            "name": "keep_input_record",
+            "type": "BOOLEAN",
+            "label": "Keep Input Record",
+            "description": "Check to keep input dataset columns",
+            "defaultValue": true,
+            "mandatory": true
+        },
+        {
+            "name": "remove_columns",
+            "type": "STRINGS",
+            "label": "Remove Columns",
+            "description": "These columns will be removed from output",
+            "mandatory": false
+        },
+        {
+            "name": "group_by_enricher",
+            "type": "BOOLEAN",
+            "label": "Group By Enricher",
+            "description": "One output column per enricher",
+            "defaultValue": false,
+            "mandatory": false
+        },
+        {"name": "censys_enabled", "type": "BOOLEAN", "label": "Enable Censys", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "geolocus_enabled", "type": "BOOLEAN", "label": "Enable Geolocus", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "geolocus_location_as_point", "label": "Geolocus Location As GeoPoint", "type": "BOOLEAN", "description": "Output location as geopoint", "mandatory": false, "defaultValue": false, "visibilityCondition": "model.geolocus_enabled"},
+        {"name": "hashlookup_enabled", "type": "BOOLEAN", "label": "Enable Hashlookup", "description": "(Digest)", "defaultValue": false, "mandatory": true},
+        {"name": "known_cve_enabled", "type": "BOOLEAN", "label": "Enable Known CVE", "description": "(CVE)", "defaultValue": false, "mandatory": true},
+        {"name": "known_cwe_enabled", "type": "BOOLEAN", "label": "Enable Known CWE", "description": "(CWE)", "defaultValue": false, "mandatory": true},
+        {"name": "known_endpoint_enabled", "type": "BOOLEAN", "label": "Enable Known Endpoint", "description": "(Endpoint)", "defaultValue": false, "mandatory": true},
+        {"name": "known_entity_enabled", "type": "BOOLEAN", "label": "Enable Known Entity", "description": "(Entity)", "defaultValue": false, "mandatory": true},
+        {"name": "known_fqdn_enabled", "type": "BOOLEAN", "label": "Enable Known FQDN", "description": "(URL|Domain)", "defaultValue": false, "mandatory": true},
+        {"name": "known_identity_enabled", "type": "BOOLEAN", "label": "Enable Known Identity", "description": "(Identity)", "defaultValue": false, "mandatory": true},
+        {"name": "known_ipvx_enabled", "type": "BOOLEAN", "label": "Enable Known IPvX", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "known_lin_file_enabled", "type": "BOOLEAN", "label": "Enable Known Linux File", "description": "(Filename)", "defaultValue": false, "mandatory": true},
+        {"name": "known_mac_enabled", "type": "BOOLEAN", "label": "Enable Known MAC", "description": "(MAC)", "defaultValue": false, "mandatory": true},
+        {"name": "known_public_network_enabled", "type": "BOOLEAN", "label": "Enable Known Public Network", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "known_network_enabled", "type": "BOOLEAN", "label": "Enable Known Network", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "known_service_enabled", "type": "BOOLEAN", "label": "Enable Known Service", "description": "(Service)", "defaultValue": false, "mandatory": true},
+        {"name": "known_sha256_enabled", "type": "BOOLEAN", "label": "Enable Known SHA-256", "description": "(Digest)", "defaultValue": false, "mandatory": true},
+        {"name": "known_ua_enabled", "type": "BOOLEAN", "label": "Enable Known User-Agent", "description": "(User-Agent)", "defaultValue": false, "mandatory": true},
+        {"name": "known_usb_enabled", "type": "BOOLEAN", "label": "Enable Known USB", "description": "(USB)", "defaultValue": false, "mandatory": true},
+        {"name": "known_vulnerability_enabled", "type": "BOOLEAN", "label": "Enable Known Vulnerability", "description": "(CVE)", "defaultValue": false, "mandatory": true},
+        {"name": "known_win_api_enabled", "type": "BOOLEAN", "label": "Enable Known Windows API", "description": "(API)", "defaultValue": false, "mandatory": true},
+        {"name": "known_win_file_enabled", "type": "BOOLEAN", "label": "Enable Known Windows File", "description": "(Filename)", "defaultValue": false, "mandatory": true},
+        {"name": "known_win_svc_enabled", "type": "BOOLEAN", "label": "Enable Known Windows Service", "description": "(Service)", "defaultValue": false, "mandatory": true},
+        {"name": "known_wmi_class_enabled", "type": "BOOLEAN", "label": "Enable Known WMI Class", "description": "(WMI Class)", "defaultValue": false, "mandatory": true},
+        {"name": "known_pwsh_cmdlet_enabled", "type": "BOOLEAN", "label": "Enable Known PowerShell Cmdlet", "description": "(Cmdlet)", "defaultValue": false, "mandatory": true},
+        {"name": "onyphe_s_enabled", "type": "BOOLEAN", "label": "Enable Onyphe Search", "description": "(URL|IPv4|Domain)", "defaultValue": false, "mandatory": true},
+        {"name": "onyphe_tl_enabled", "type": "BOOLEAN", "label": "Enable Onyphe ThreatList", "description": "(URL|IPv4|IPv6)", "defaultValue": false, "mandatory": true},
+        {"name": "opencti_enabled", "type": "BOOLEAN", "label": "Enable OpenCTI", "description": "(URL|IPv4|IPv6|Domain|Digest)", "defaultValue": false, "mandatory": true},
+        {"name": "properties_enabled", "type": "BOOLEAN", "label": "Enable Properties", "description": "(URL|IPv4|IPv6|Domain)", "defaultValue": false, "mandatory": true},
+        {"name": "rdap_enabled", "type": "BOOLEAN", "label": "Enable RDAP", "description": "(URL|IPv4|IPv6|Domain)", "defaultValue": false, "mandatory": true},
+        {"name": "url_resolver_enabled", "type": "BOOLEAN", "label": "Enable URL Resolver", "description": "(URL)", "defaultValue": false, "mandatory": true},
+        {"name": "virustotal_enabled", "type": "BOOLEAN", "label": "Enable VirusTotal", "description": "(URL|FQDN|IPv4|IPv6|Domain|Digest)", "defaultValue": false, "mandatory": true},
+        {"name": "whois_enabled", "type": "BOOLEAN", "label": "Enable Whois", "description": "(URL|IPv4|IPv6|Domain)", "defaultValue": false, "mandatory": true}
+    ]
+}

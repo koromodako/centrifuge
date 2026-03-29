@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -e
+
+function enrich {
+    centrifuge --config centrifuge.test.json enrich "${1}" | jq
+}
+
+echo "Testing enrich..."
+echo "Enriching USB..."
+enrich "1234:5678"
+echo "Enriching MAC..."
+enrich "00:11:22:33:44:55"
+echo "Enriching CVE..."
+enrich "CVE-2021-44228"
+echo "Enriching CWE..."
+enrich "CWE-79"
+echo "Enriching IPv4..."
+enrich "8.8.8.8"
+echo "Enriching IPv6..."
+enrich "2001:4860:4860::8888"
+echo "Enriching Network (IPv4)..."
+enrich "8.8.8.8"
+echo "Enriching Network (IPv6)..."
+enrich "2001:4860:4860::8888"
+echo "Enriching Network (URL)..."
+enrich "http://8.8.8.8/foo"
+echo "Enriching Digest (SHA256)..."
+enrich "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+echo "Enriching UUID..."
+enrich "123e4567-e89b-12d3-a456-426614174000"
+echo "Enriching Email..."
+enrich "test@example.com"
+echo "Enriching Phone..."
+enrich "+33612345678"
+echo "Enriching Domain..."
+enrich "www.example.com"
+echo "Enriching URL..."
+enrich "https://www.example.com/path?query=1"
+echo "Done."

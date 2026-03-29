@@ -1,0 +1,10 @@
+*.zip
+*.pyc
+dist/
+build/
+*.egg-info/
+centrifuge.json
+__pycache__/
+__version__.py
+.venv
+.vscode/

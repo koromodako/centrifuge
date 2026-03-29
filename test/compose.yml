@@ -1,0 +1,13 @@
+# do not use for production
+services:
+  centrifuge-db:
+    image: postgres:alpine
+    restart: always
+    shm_size: 128mb
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_DB: centrifuge
+      POSTGRES_USER: centrifuge
+      # this password is for testing on localhost only
+      POSTGRES_PASSWORD: centrifuge

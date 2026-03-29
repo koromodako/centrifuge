@@ -1,0 +1,319 @@
+{
+    "psl": {
+        "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/public_suffix.list",
+        "validity": 30
+    },
+    "cache": {
+        "directory": "/home/user/.cache/centrifuge",
+        "compressed": true
+    },
+    "postgresql": {
+        "host": "127.0.0.1",
+        "port": 5432,
+        "user": "centrifuge",
+        "password": "centrifuge",
+        "database": "centrifuge"
+    },
+    "enable": {
+        "onyphe_s": false,
+        "onyphe_tl": false,
+        "censys": false,
+        "geolocus": false,
+        "hashlookup": false,
+        "known_cve": true,
+        "known_cwe": true,
+        "known_endpoint": true,
+        "known_entity": true,
+        "known_fqdn": true,
+        "known_identity": true,
+        "known_ipvx": true,
+        "known_lin_file": true,
+        "known_mac": true,
+        "known_network": true,
+        "known_public_network": true,
+        "known_pwsh_cmdlet": true,
+        "known_service": true,
+        "known_sha256": true,
+        "known_ua": true,
+        "known_usb": true,
+        "known_win_api": true,
+        "known_win_file": true,
+        "known_win_svc": true,
+        "known_wmi_class": true,
+        "opencti": false,
+        "properties": true,
+        "rdap": false,
+        "url_resolver": false,
+        "virustotal": false,
+        "whois": false
+    },
+    "resource": {
+        "aws": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/aws_ip_ranges.json",
+            "validity": 30
+        },
+        "azure": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/azure_ip_ranges.json",
+            "validity": 30
+        },
+        "bootloaders": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/bootloaders_io.json",
+            "validity": 30
+        },
+        "cwec": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/cwec_latest.xml",
+            "validity": 30
+        },
+        "email_bl": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/disposable_email_blocklist.list",
+            "validity": 30
+        },
+        "exploitdb": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/exploitdb.csv",
+            "validity": 30
+        },
+        "filesec": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/filesec_project.csv",
+            "validity": 30
+        },
+        "gcp": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/gcp_ip_ranges.json",
+            "validity": 30
+        },
+        "ghsa": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/github_advisories.json",
+            "validity": 30
+        },
+        "gtfobins": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/gftobins_org.json",
+            "validity": 30
+        },
+        "hijacklibs": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/hijacklibs.json",
+            "validity": 30
+        },
+        "ieee_cid": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/standards_oui_ieee_cid.csv",
+            "validity": 30
+        },
+        "kev": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/cisa_kev.json",
+            "validity": 30
+        },
+        "lin_usb_ids": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/usb_ids.json",
+            "validity": 30
+        },
+        "loflcab": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/loflcab.json",
+            "validity": 30
+        },
+        "lolbas": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/lolbas.json",
+            "validity": 30
+        },
+        "lolc2": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/lolc2_C2_data.json",
+            "validity": 30
+        },
+        "loldrv": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/loldrivers_io.json",
+            "validity": 30
+        },
+        "lolrmm": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/lolrmm.json",
+            "validity": 30
+        },
+        "lothw": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/enesilhaydin_hardwares.json",
+            "validity": 30
+        },
+        "lots": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/lots_project.csv",
+            "validity": 30
+        },
+        "lottun": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/lottunnels_domains.csv",
+            "validity": 30
+        },
+        "malapi": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/malapi_windows_apis.csv",
+            "validity": 30
+        },
+        "nvd": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/nvdcve-2.0-{year}.json.gz",
+            "custom": {
+                "first_year": 2002
+            },
+            "validity": 30
+
+        },
+        "protonvpn": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/protonvpn_all.json",
+            "validity": 30
+        },
+        "susp_http_ua": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/suspicious_http_user_agents_lists.csv",
+            "validity": 30
+        },
+        "susp_mac_addr": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/suspicious_mac_address_list.csv",
+            "validity": 30
+        },
+        "susp_usb_ids": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/suspicious_usb_ids_list.csv",
+            "validity": 30
+        },
+        "susp_win_svcs": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/suspicious_windows_services_names_list.csv",
+            "validity": 30
+        },
+        "tor": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/tor_nodes_exit.json",
+            "validity": 30
+        },
+        "tranco": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/tranco_top_1m_domains.csv",
+            "validity": 30
+        },
+        "urlhaus": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/urlhaus_online.csv",
+            "validity": 30
+        },
+        "x4b_dc": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/x4bnet_vpn_datacenter_ipv4.list",
+            "validity": 30
+        },
+        "x4b_vpn": {
+            "url": "https://raw.githubusercontent.com/emeryn/Cybref/refs/heads/main/output/x4bnet_vpn_ipv4_list.list",
+            "validity": 30
+        }
+    },
+    "group_by_enricher": false,
+    "enricher": {
+
+    },
+    "enricher": {
+        "onyphe_s": {
+            "validity": 30,
+            "api_key": null,
+            "proxy_headers": {}
+        },
+        "onyphe_tl": {
+            "validity": 30,
+            "api_key": null,
+            "proxy_headers": {}
+        },
+        "censys": {
+            "validity": 30,
+            "org_id": null,
+            "api_key": null,
+            "headers": {}
+        },
+        "geolocus": {
+            "validity": 30,
+            "source": "/data/mmdb/geolocus.mmdb",
+            "location_as_point": false
+        },
+        "hashlookup": {
+            "validity": 30,
+            "api_url": "https://hashlookup.circl.lu/",
+            "headers": {}
+        },
+        "known_cve": {
+            "validity": 0
+        },
+        "known_cwe": {
+            "validity": 0
+        },
+        "known_endpoint": {
+            "validity": 0
+        },
+        "known_entity": {
+            "validity": 0
+        },
+        "known_fqdn": {
+            "validity": 0
+        },
+        "known_identity": {
+            "validity": 0
+        },
+        "known_ipvx": {
+            "validity": 0
+        },
+        "known_lin_file": {
+            "validity": 0
+        },
+        "known_mac": {
+            "validity": 0
+        },
+        "known_network": {
+            "validity": 0
+        },
+        "known_public_network": {
+            "validity": 0
+        },
+        "known_pwsh_cmdlet": {
+            "validity": 0
+        },
+        "known_service": {
+            "validity": 0
+        },
+        "known_sha256": {
+            "validity": 0
+        },
+        "known_ua": {
+            "validity": 0
+        },
+        "known_usb": {
+            "validity": 0
+        },
+        "known_win_api": {
+            "validity": 0
+        },
+        "known_win_file": {
+            "validity": 0
+        },
+        "known_win_svc": {
+            "validity": 0
+        },
+        "known_wmi_class": {
+            "validity": 0
+        },
+        "opencti": {
+            "validity": 30,
+            "verify": true,
+            "fe_url": "https://opencti.demo.lan/",
+            "api_url": "https://api.opencti.demo.lan/",
+            "api_key": "change-me-for-production-use"
+        },
+        "properties": {
+            "validity": 30
+        },
+        "rdap": {
+            "validity": 30,
+            "verify": true,
+            "timeout": 5,
+            "ca_bundle_path": null,
+            "cache_directory": "/home/user/.cache/centrifuge/rdap",
+            "follow_redirects": true
+        },
+        "url_resolver": {
+            "validity": 30,
+            "headers": {},
+            "max_depth": 5,
+            "known_shorteners": []
+        },
+        "virustotal": {
+            "validity": 30,
+            "agent": "centrifuge",
+            "timeout": 5,
+            "api_key": "change-me-for-production-use",
+            "trust_env": false
+        },
+        "whois": {
+            "validity": 30,
+            "socks_proxy": null
+        }
+    }
+}

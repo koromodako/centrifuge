@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "label": "Centrifuge Loader",
+        "description": "PostgreSQL loader based on Centrifuge",
+        "icon": "fas fa-database"
+    },
+    "kind": "PYTHON",
+    "resourceKeys": [],
+    "inputRoles": [],
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output dataset",
+            "description": "Dataset containing loading status",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {"name": "known_cve_enabled", "type": "BOOLEAN", "label": "Known CVE", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_cwe_enabled", "type": "BOOLEAN", "label": "Known CWE", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_fqdn_enabled", "type": "BOOLEAN", "label": "Known FQDN", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_ipvx_enabled", "type": "BOOLEAN", "label": "Known IPvX", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_lin_file_enabled", "type": "BOOLEAN", "label": "Known Linux File", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_mac_enabled", "type": "BOOLEAN", "label": "Known MAC", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_public_network_enabled", "type": "BOOLEAN", "label": "Known Public Network", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_sha256_enabled", "type": "BOOLEAN", "label": "Known SHA-256", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_ua_enabled", "type": "BOOLEAN", "label": "Known User-Agent", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_usb_enabled", "type": "BOOLEAN", "label": "Known USB", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_win_api_enabled", "type": "BOOLEAN", "label": "Known Windows API", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_win_file_enabled", "type": "BOOLEAN", "label": "Known Windows File", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_win_svc_enabled", "type": "BOOLEAN", "label": "Known Windows Service", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_wmi_class_enabled", "type": "BOOLEAN", "label": "Known WMI Class", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {"name": "known_pwsh_cmdlet_enabled", "type": "BOOLEAN", "label": "Known PowerShell Cmdlet", "description": "Check to enable", "mandatory": true, "defaultValue": true},
+        {
+            "name": "overrides",
+            "label": "Loader Resources Overrides",
+            "type": "OBJECT_LIST",
+            "description": "List of loader resources overrides",
+            "mandatory": true,
+            "subParams": [
+                {"name": "resource", "label": "Resource", "type": "STRING", "description": "", "mandatory": true},
+                {"name": "url", "label": "URL", "type": "STRING", "description": "Resource URL", "mandatory": true},
+                {"name": "proxy", "label": "Proxy", "type": "STRING", "description": "Proxy used to fetch resource", "mandatory": false},
+                {"name": "custom", "label": "Custom Properties", "type": "MAP", "description": "Resource custom properties", "mandatory": false},
+                {"name": "headers", "label": "HTTP Headers", "type": "MAP", "description": "Headers for outgoing requests", "mandatory": false},
+                {"name": "validity", "label": "Validity", "type": "INT", "description": "Number of days before cached resource expires (use 0 to disable)", "mandatory": false, "defaultValue": 7}
+            ]
+        }
+    ]
+}

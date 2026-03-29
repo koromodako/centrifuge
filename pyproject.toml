@@ -1,0 +1,67 @@
+[project]
+name = "edf-centrifuge"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["edf", "centrifuge", "atom", "enrichment", "engine"]
+description = "EDF Atom Enrichment Engine"
+requires-python = ">=3.12"
+dynamic = ["version"]
+authors = [
+  { name="CERT-EDF", email="cert@edf.fr" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+    "Topic :: Security",
+]
+dependencies = [
+    "rich~=14.3",
+    "asyncpg~=0.31",
+    "aiohttp~=3.13",
+    "aionyphe~=3.0",
+    "asyncwhois~=1.1",
+    "pslextract~=2.1",
+    "lxml~=6.0",
+    "pycti~=6.8",
+    "vt-py~=0.22",
+    "maxminddb~=3.0",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/cert-edf/centrifuge"
+"Repository" = "https://github.com/cert-edf/centrifuge"
+"Bug Tracker" = "https://github.com/cert-edf/centrifuge/issues"
+
+
+[project.scripts]
+centrifuge = "edf_centrifuge.main:app"
+
+
+[build-system]
+requires = ["setuptools>=82", "setuptools_scm>=9", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["edf_centrifuge", "edf_centrifuge.*"]
+
+
+[tool.setuptools_scm]
+version_file = "edf_centrifuge/__version__.py"
+
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+
+[tool.isort]
+profile = "black"
+line_length = 79
